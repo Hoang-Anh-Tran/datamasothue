@@ -1,0 +1,4 @@
+scrapy
+psycoqg2-bianry
+redis
+python-dotenv

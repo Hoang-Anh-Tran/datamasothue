@@ -1,0 +1,985 @@
+2025-08-08 13:58:09 [scrapy.utils.log] INFO: Scrapy 2.11.1 started (bot: masothue)
+2025-08-08 13:58:09 [scrapy.utils.log] INFO: Versions: lxml 5.2.1.0, libxml2 2.10.4, cssselect 1.2.0, parsel 1.8.1, w3lib 2.0.0, Twisted 23.10.0, Python 3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:27:36) [GCC 11.2.0], pyOpenSSL 24.2.1 (OpenSSL 3.0.16 11 Feb 2025), cryptography 43.0.0, Platform Linux-6.14.0-27-generic-x86_64-with-glibc2.39
+2025-08-08 13:58:09 [scrapy.addons] INFO: Enabled addons:
+[]
+2025-08-08 13:58:09 [py.warnings] WARNING: /home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/request.py:254: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+
+It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+
+See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+  return cls(crawler)
+
+2025-08-08 13:58:09 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.epollreactor.EPollReactor
+2025-08-08 13:58:09 [scrapy.extensions.telnet] INFO: Telnet Password: a79ab0279ddbae1d
+2025-08-08 13:58:09 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-08-08 13:58:09 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'AUTOTHROTTLE_MAX_DELAY': 10,
+ 'AUTOTHROTTLE_START_DELAY': 2,
+ 'BOT_NAME': 'masothue',
+ 'CONCURRENT_REQUESTS': 8,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 4,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 1.0,
+ 'DOWNLOAD_FAIL_ON_DATALOSS': False,
+ 'DUPEFILTER_CLASS': 'scrapy_splash.SplashAwareDupeFilter',
+ 'HTTPCACHE_STORAGE': 'scrapy_splash.SplashAwareFSCacheStorage',
+ 'LOG_FILE': '/home/hoanganh12/masothue/data/raw/logs/default/link_spider/2025-08-08T13_58_04.log',
+ 'NEWSPIDER_MODULE': 'masothue.spiders',
+ 'RETRY_HTTP_CODES': [500, 502, 503, 504, 522, 524, 408, 403, 407],
+ 'RETRY_TIMES': 5,
+ 'SPIDER_MODULES': ['masothue.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'}
+2025-08-08 13:58:09 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'masothue.middleware.TMProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'masothue.middleware.TMProxyRetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy_splash.SplashCookiesMiddleware',
+ 'scrapy_splash.SplashMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-08-08 13:58:09 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy_splash.SplashDeduplicateArgsMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-08-08 13:58:09 [scrapy.middleware] INFO: Enabled item pipelines:
+['masothue.pipelines.PostgresPipeline']
+2025-08-08 13:58:09 [scrapy.core.engine] INFO: Spider opened
+2025-08-08 13:58:09 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-08-08 13:58:09 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6024
+2025-08-08 13:58:09 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): tmproxy.com:443
+2025-08-08 13:58:24 [urllib3.connectionpool] DEBUG: https://tmproxy.com:443 "POST /api/proxy/get-new-proxy HTTP/11" 200 None
+2025-08-08 13:58:24 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → dùng lại proxy cũ
+2025-08-08 13:58:24 [link_spider] WARNING: [TMProxy] Không lấy được proxy!
+2025-08-08 13:58:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh> (referer: None)
+2025-08-08 13:58:25 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2025-08-08 13:58:25 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): tmproxy.com:443
+2025-08-08 13:58:25 [urllib3.connectionpool] DEBUG: https://tmproxy.com:443 "POST /api/proxy/get-new-proxy HTTP/11" 200 None
+2025-08-08 13:58:25 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → dùng lại proxy cũ
+2025-08-08 13:58:25 [link_spider] WARNING: [TMProxy] Không lấy được proxy!
+2025-08-08 13:58:25 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): tmproxy.com:443
+2025-08-08 13:58:25 [urllib3.connectionpool] DEBUG: https://tmproxy.com:443 "POST /api/proxy/get-new-proxy HTTP/11" 200 None
+2025-08-08 13:58:25 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → dùng lại proxy cũ
+2025-08-08 13:58:25 [link_spider] WARNING: [TMProxy] Không lấy được proxy!
+2025-08-08 13:58:25 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): tmproxy.com:443
+2025-08-08 13:58:26 [urllib3.connectionpool] DEBUG: https://tmproxy.com:443 "POST /api/proxy/get-new-proxy HTTP/11" 200 None
+2025-08-08 13:58:26 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → dùng lại proxy cũ
+2025-08-08 13:58:26 [link_spider] WARNING: [TMProxy] Không lấy được proxy!
+2025-08-08 13:58:26 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): tmproxy.com:443
+2025-08-08 13:58:27 [urllib3.connectionpool] DEBUG: https://tmproxy.com:443 "POST /api/proxy/get-new-proxy HTTP/11" 200 None
+2025-08-08 13:58:27 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → dùng lại proxy cũ
+2025-08-08 13:58:27 [link_spider] WARNING: [TMProxy] Không lấy được proxy!
+2025-08-08 13:58:27 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): tmproxy.com:443
+2025-08-08 13:58:27 [urllib3.connectionpool] DEBUG: https://tmproxy.com:443 "POST /api/proxy/get-new-proxy HTTP/11" 200 None
+2025-08-08 13:58:27 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → dùng lại proxy cũ
+2025-08-08 13:58:27 [link_spider] WARNING: [TMProxy] Không lấy được proxy!
+2025-08-08 13:58:27 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): tmproxy.com:443
+2025-08-08 13:58:28 [urllib3.connectionpool] DEBUG: https://tmproxy.com:443 "POST /api/proxy/get-new-proxy HTTP/11" 200 None
+2025-08-08 13:58:28 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → dùng lại proxy cũ
+2025-08-08 13:58:28 [link_spider] WARNING: [TMProxy] Không lấy được proxy!
+2025-08-08 13:58:28 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): tmproxy.com:443
+2025-08-08 13:58:28 [urllib3.connectionpool] DEBUG: https://tmproxy.com:443 "POST /api/proxy/get-new-proxy HTTP/11" 200 None
+2025-08-08 13:58:28 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → dùng lại proxy cũ
+2025-08-08 13:58:28 [link_spider] WARNING: [TMProxy] Không lấy được proxy!
+2025-08-08 13:58:28 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): tmproxy.com:443
+2025-08-08 13:58:28 [urllib3.connectionpool] DEBUG: https://tmproxy.com:443 "POST /api/proxy/get-new-proxy HTTP/11" 200 None
+2025-08-08 13:58:28 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → dùng lại proxy cũ
+2025-08-08 13:58:28 [link_spider] WARNING: [TMProxy] Không lấy được proxy!
+2025-08-08 13:58:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/thai-nguyen-131> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+2025-08-08 13:58:28 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): tmproxy.com:443
+2025-08-08 13:58:28 [urllib3.connectionpool] DEBUG: https://tmproxy.com:443 "POST /api/proxy/get-new-proxy HTTP/11" 200 None
+2025-08-08 13:58:28 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → dùng lại proxy cũ
+2025-08-08 13:58:28 [link_spider] WARNING: [TMProxy] Không lấy được proxy!
+2025-08-08 13:58:28 [scrapy.core.scraper] ERROR: Spider error processing <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/thai-nguyen-131> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+Traceback (most recent call last):
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/defer.py", line 279, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy_splash/middleware.py", line 162, in process_spider_output
+    for el in result:
+              ^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/offsite.py", line 28, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/referer.py", line 352, in <genexpr>
+    return (self._set_referer(r, response) for r in result or ())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/urllength.py", line 27, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/depth.py", line 31, in <genexpr>
+    return (r for r in result or () if self._filter(r, response, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/masothue/data/raw/masothue/spiders/link_spider.py", line 90, in parse_location
+    yield CompanyLinkItem(tax_code=tax_id, href=full_url)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 76, in __init__
+    self[k] = v
+    ~~~~^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 85, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'CompanyLinkItem does not support field: tax_code'
+2025-08-08 13:58:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/thai-binh-128> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+2025-08-08 13:58:29 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): tmproxy.com:443
+2025-08-08 13:58:29 [urllib3.connectionpool] DEBUG: https://tmproxy.com:443 "POST /api/proxy/get-new-proxy HTTP/11" 200 None
+2025-08-08 13:58:29 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → dùng lại proxy cũ
+2025-08-08 13:58:29 [link_spider] WARNING: [TMProxy] Không lấy được proxy!
+2025-08-08 13:58:29 [scrapy.core.scraper] ERROR: Spider error processing <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/thai-binh-128> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+Traceback (most recent call last):
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/defer.py", line 279, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy_splash/middleware.py", line 162, in process_spider_output
+    for el in result:
+              ^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/offsite.py", line 28, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/referer.py", line 352, in <genexpr>
+    return (self._set_referer(r, response) for r in result or ())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/urllength.py", line 27, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/depth.py", line 31, in <genexpr>
+    return (r for r in result or () if self._filter(r, response, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/masothue/data/raw/masothue/spiders/link_spider.py", line 90, in parse_location
+    yield CompanyLinkItem(tax_code=tax_id, href=full_url)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 76, in __init__
+    self[k] = v
+    ~~~~^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 85, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'CompanyLinkItem does not support field: tax_code'
+2025-08-08 13:58:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/tay-ninh-90> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+2025-08-08 13:58:31 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): tmproxy.com:443
+2025-08-08 13:58:31 [urllib3.connectionpool] DEBUG: https://tmproxy.com:443 "POST /api/proxy/get-new-proxy HTTP/11" 200 None
+2025-08-08 13:58:31 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → dùng lại proxy cũ
+2025-08-08 13:58:31 [link_spider] WARNING: [TMProxy] Không lấy được proxy!
+2025-08-08 13:58:31 [scrapy.core.scraper] ERROR: Spider error processing <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/tay-ninh-90> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+Traceback (most recent call last):
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/defer.py", line 279, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy_splash/middleware.py", line 162, in process_spider_output
+    for el in result:
+              ^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/offsite.py", line 28, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/referer.py", line 352, in <genexpr>
+    return (self._set_referer(r, response) for r in result or ())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/urllength.py", line 27, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/depth.py", line 31, in <genexpr>
+    return (r for r in result or () if self._filter(r, response, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/masothue/data/raw/masothue/spiders/link_spider.py", line 90, in parse_location
+    yield CompanyLinkItem(tax_code=tax_id, href=full_url)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 76, in __init__
+    self[k] = v
+    ~~~~^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 85, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'CompanyLinkItem does not support field: tax_code'
+2025-08-08 13:58:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/son-la-316> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+2025-08-08 13:58:32 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): tmproxy.com:443
+2025-08-08 13:58:32 [urllib3.connectionpool] DEBUG: https://tmproxy.com:443 "POST /api/proxy/get-new-proxy HTTP/11" 200 None
+2025-08-08 13:58:32 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → dùng lại proxy cũ
+2025-08-08 13:58:32 [link_spider] WARNING: [TMProxy] Không lấy được proxy!
+2025-08-08 13:58:32 [scrapy.core.scraper] ERROR: Spider error processing <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/son-la-316> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+Traceback (most recent call last):
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/defer.py", line 279, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy_splash/middleware.py", line 162, in process_spider_output
+    for el in result:
+              ^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/offsite.py", line 28, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/referer.py", line 352, in <genexpr>
+    return (self._set_referer(r, response) for r in result or ())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/urllength.py", line 27, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/depth.py", line 31, in <genexpr>
+    return (r for r in result or () if self._filter(r, response, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/masothue/data/raw/masothue/spiders/link_spider.py", line 90, in parse_location
+    yield CompanyLinkItem(tax_code=tax_id, href=full_url)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 76, in __init__
+    self[k] = v
+    ~~~~^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 85, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'CompanyLinkItem does not support field: tax_code'
+2025-08-08 13:58:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/soc-trang-949> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+2025-08-08 13:58:33 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): tmproxy.com:443
+2025-08-08 13:58:33 [urllib3.connectionpool] DEBUG: https://tmproxy.com:443 "POST /api/proxy/get-new-proxy HTTP/11" 200 None
+2025-08-08 13:58:33 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → dùng lại proxy cũ
+2025-08-08 13:58:33 [link_spider] WARNING: [TMProxy] Không lấy được proxy!
+2025-08-08 13:58:33 [scrapy.core.scraper] ERROR: Spider error processing <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/soc-trang-949> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+Traceback (most recent call last):
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/defer.py", line 279, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy_splash/middleware.py", line 162, in process_spider_output
+    for el in result:
+              ^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/offsite.py", line 28, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/referer.py", line 352, in <genexpr>
+    return (self._set_referer(r, response) for r in result or ())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/urllength.py", line 27, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/depth.py", line 31, in <genexpr>
+    return (r for r in result or () if self._filter(r, response, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/masothue/data/raw/masothue/spiders/link_spider.py", line 90, in parse_location
+    yield CompanyLinkItem(tax_code=tax_id, href=full_url)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 76, in __init__
+    self[k] = v
+    ~~~~^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 85, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'CompanyLinkItem does not support field: tax_code'
+2025-08-08 13:58:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/quang-tri-69> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+2025-08-08 13:58:34 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): tmproxy.com:443
+2025-08-08 13:58:39 [urllib3.connectionpool] DEBUG: https://tmproxy.com:443 "POST /api/proxy/get-new-proxy HTTP/11" 200 None
+2025-08-08 13:58:39 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → dùng lại proxy cũ
+2025-08-08 13:58:39 [link_spider] WARNING: [TMProxy] Không lấy được proxy!
+2025-08-08 13:58:39 [scrapy.core.scraper] ERROR: Spider error processing <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/quang-tri-69> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+Traceback (most recent call last):
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/defer.py", line 279, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy_splash/middleware.py", line 162, in process_spider_output
+    for el in result:
+              ^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/offsite.py", line 28, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/referer.py", line 352, in <genexpr>
+    return (self._set_referer(r, response) for r in result or ())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/urllength.py", line 27, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/depth.py", line 31, in <genexpr>
+    return (r for r in result or () if self._filter(r, response, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/masothue/data/raw/masothue/spiders/link_spider.py", line 90, in parse_location
+    yield CompanyLinkItem(tax_code=tax_id, href=full_url)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 76, in __init__
+    self[k] = v
+    ~~~~^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 85, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'CompanyLinkItem does not support field: tax_code'
+2025-08-08 13:58:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/quang-ninh-142> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+2025-08-08 13:58:40 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): tmproxy.com:443
+2025-08-08 13:58:44 [urllib3.connectionpool] DEBUG: https://tmproxy.com:443 "POST /api/proxy/get-new-proxy HTTP/11" 200 None
+2025-08-08 13:58:44 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → dùng lại proxy cũ
+2025-08-08 13:58:44 [link_spider] WARNING: [TMProxy] Không lấy được proxy!
+2025-08-08 13:58:44 [scrapy.core.scraper] ERROR: Spider error processing <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/quang-ninh-142> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+Traceback (most recent call last):
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/defer.py", line 279, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy_splash/middleware.py", line 162, in process_spider_output
+    for el in result:
+              ^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/offsite.py", line 28, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/referer.py", line 352, in <genexpr>
+    return (self._set_referer(r, response) for r in result or ())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/urllength.py", line 27, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/depth.py", line 31, in <genexpr>
+    return (r for r in result or () if self._filter(r, response, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/masothue/data/raw/masothue/spiders/link_spider.py", line 90, in parse_location
+    yield CompanyLinkItem(tax_code=tax_id, href=full_url)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 76, in __init__
+    self[k] = v
+    ~~~~^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 85, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'CompanyLinkItem does not support field: tax_code'
+2025-08-08 13:58:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/quang-ngai-301> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+2025-08-08 13:58:44 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): tmproxy.com:443
+2025-08-08 13:58:44 [urllib3.connectionpool] DEBUG: https://tmproxy.com:443 "POST /api/proxy/get-new-proxy HTTP/11" 200 None
+2025-08-08 13:58:44 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → dùng lại proxy cũ
+2025-08-08 13:58:44 [link_spider] WARNING: [TMProxy] Không lấy được proxy!
+2025-08-08 13:58:44 [scrapy.core.scraper] ERROR: Spider error processing <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/quang-ngai-301> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+Traceback (most recent call last):
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/defer.py", line 279, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy_splash/middleware.py", line 162, in process_spider_output
+    for el in result:
+              ^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/offsite.py", line 28, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/referer.py", line 352, in <genexpr>
+    return (self._set_referer(r, response) for r in result or ())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/urllength.py", line 27, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/depth.py", line 31, in <genexpr>
+    return (r for r in result or () if self._filter(r, response, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/masothue/data/raw/masothue/spiders/link_spider.py", line 90, in parse_location
+    yield CompanyLinkItem(tax_code=tax_id, href=full_url)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 76, in __init__
+    self[k] = v
+    ~~~~^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 85, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'CompanyLinkItem does not support field: tax_code'
+2025-08-08 13:58:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/hue-16354> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+2025-08-08 13:58:46 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): tmproxy.com:443
+2025-08-08 13:58:46 [urllib3.connectionpool] DEBUG: https://tmproxy.com:443 "POST /api/proxy/get-new-proxy HTTP/11" 200 None
+2025-08-08 13:58:46 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → dùng lại proxy cũ
+2025-08-08 13:58:46 [link_spider] WARNING: [TMProxy] Không lấy được proxy!
+2025-08-08 13:58:46 [scrapy.core.scraper] ERROR: Spider error processing <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/hue-16354> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+Traceback (most recent call last):
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/defer.py", line 279, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy_splash/middleware.py", line 162, in process_spider_output
+    for el in result:
+              ^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/offsite.py", line 28, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/referer.py", line 352, in <genexpr>
+    return (self._set_referer(r, response) for r in result or ())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/urllength.py", line 27, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/depth.py", line 31, in <genexpr>
+    return (r for r in result or () if self._filter(r, response, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/masothue/data/raw/masothue/spiders/link_spider.py", line 90, in parse_location
+    yield CompanyLinkItem(tax_code=tax_id, href=full_url)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 76, in __init__
+    self[k] = v
+    ~~~~^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 85, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'CompanyLinkItem does not support field: tax_code'
+2025-08-08 13:58:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/yen-bai-724> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+2025-08-08 13:58:46 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): tmproxy.com:443
+2025-08-08 13:58:47 [urllib3.connectionpool] DEBUG: https://tmproxy.com:443 "POST /api/proxy/get-new-proxy HTTP/11" 200 None
+2025-08-08 13:58:47 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → dùng lại proxy cũ
+2025-08-08 13:58:47 [link_spider] WARNING: [TMProxy] Không lấy được proxy!
+2025-08-08 13:58:47 [scrapy.core.scraper] ERROR: Spider error processing <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/yen-bai-724> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+Traceback (most recent call last):
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/defer.py", line 279, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy_splash/middleware.py", line 162, in process_spider_output
+    for el in result:
+              ^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/offsite.py", line 28, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/referer.py", line 352, in <genexpr>
+    return (self._set_referer(r, response) for r in result or ())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/urllength.py", line 27, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/depth.py", line 31, in <genexpr>
+    return (r for r in result or () if self._filter(r, response, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/masothue/data/raw/masothue/spiders/link_spider.py", line 90, in parse_location
+    yield CompanyLinkItem(tax_code=tax_id, href=full_url)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 76, in __init__
+    self[k] = v
+    ~~~~^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 85, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'CompanyLinkItem does not support field: tax_code'
+2025-08-08 13:58:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/vinh-phuc-420> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+2025-08-08 13:58:48 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): tmproxy.com:443
+2025-08-08 13:58:48 [urllib3.connectionpool] DEBUG: https://tmproxy.com:443 "POST /api/proxy/get-new-proxy HTTP/11" 200 None
+2025-08-08 13:58:48 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → dùng lại proxy cũ
+2025-08-08 13:58:48 [link_spider] WARNING: [TMProxy] Không lấy được proxy!
+2025-08-08 13:58:48 [scrapy.core.scraper] ERROR: Spider error processing <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/vinh-phuc-420> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+Traceback (most recent call last):
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/defer.py", line 279, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy_splash/middleware.py", line 162, in process_spider_output
+    for el in result:
+              ^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/offsite.py", line 28, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/referer.py", line 352, in <genexpr>
+    return (self._set_referer(r, response) for r in result or ())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/urllength.py", line 27, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/depth.py", line 31, in <genexpr>
+    return (r for r in result or () if self._filter(r, response, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/masothue/data/raw/masothue/spiders/link_spider.py", line 90, in parse_location
+    yield CompanyLinkItem(tax_code=tax_id, href=full_url)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 76, in __init__
+    self[k] = v
+    ~~~~^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 85, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'CompanyLinkItem does not support field: tax_code'
+2025-08-08 13:58:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/vinh-long-193> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+2025-08-08 13:58:49 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): tmproxy.com:443
+2025-08-08 13:58:50 [urllib3.connectionpool] DEBUG: https://tmproxy.com:443 "POST /api/proxy/get-new-proxy HTTP/11" 200 None
+2025-08-08 13:58:50 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → dùng lại proxy cũ
+2025-08-08 13:58:50 [link_spider] WARNING: [TMProxy] Không lấy được proxy!
+2025-08-08 13:58:50 [scrapy.core.scraper] ERROR: Spider error processing <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/vinh-long-193> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+Traceback (most recent call last):
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/defer.py", line 279, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy_splash/middleware.py", line 162, in process_spider_output
+    for el in result:
+              ^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/offsite.py", line 28, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/referer.py", line 352, in <genexpr>
+    return (self._set_referer(r, response) for r in result or ())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/urllength.py", line 27, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/depth.py", line 31, in <genexpr>
+    return (r for r in result or () if self._filter(r, response, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/masothue/data/raw/masothue/spiders/link_spider.py", line 90, in parse_location
+    yield CompanyLinkItem(tax_code=tax_id, href=full_url)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 76, in __init__
+    self[k] = v
+    ~~~~^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 85, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'CompanyLinkItem does not support field: tax_code'
+2025-08-08 13:58:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/tuyen-quang-1284> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+2025-08-08 13:58:50 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): tmproxy.com:443
+2025-08-08 13:58:51 [urllib3.connectionpool] DEBUG: https://tmproxy.com:443 "POST /api/proxy/get-new-proxy HTTP/11" 200 None
+2025-08-08 13:58:51 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → dùng lại proxy cũ
+2025-08-08 13:58:51 [link_spider] WARNING: [TMProxy] Không lấy được proxy!
+2025-08-08 13:58:51 [scrapy.core.scraper] ERROR: Spider error processing <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/tuyen-quang-1284> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+Traceback (most recent call last):
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/defer.py", line 279, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy_splash/middleware.py", line 162, in process_spider_output
+    for el in result:
+              ^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/offsite.py", line 28, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/referer.py", line 352, in <genexpr>
+    return (self._set_referer(r, response) for r in result or ())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/urllength.py", line 27, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/depth.py", line 31, in <genexpr>
+    return (r for r in result or () if self._filter(r, response, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/masothue/data/raw/masothue/spiders/link_spider.py", line 90, in parse_location
+    yield CompanyLinkItem(tax_code=tax_id, href=full_url)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 76, in __init__
+    self[k] = v
+    ~~~~^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 85, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'CompanyLinkItem does not support field: tax_code'
+2025-08-08 13:58:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/tra-vinh-41> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+2025-08-08 13:58:52 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): tmproxy.com:443
+2025-08-08 13:58:52 [urllib3.connectionpool] DEBUG: https://tmproxy.com:443 "POST /api/proxy/get-new-proxy HTTP/11" 200 None
+2025-08-08 13:58:52 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → dùng lại proxy cũ
+2025-08-08 13:58:52 [link_spider] WARNING: [TMProxy] Không lấy được proxy!
+2025-08-08 13:58:52 [scrapy.core.scraper] ERROR: Spider error processing <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/tra-vinh-41> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+Traceback (most recent call last):
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/defer.py", line 279, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy_splash/middleware.py", line 162, in process_spider_output
+    for el in result:
+              ^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/offsite.py", line 28, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/referer.py", line 352, in <genexpr>
+    return (self._set_referer(r, response) for r in result or ())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/urllength.py", line 27, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/depth.py", line 31, in <genexpr>
+    return (r for r in result or () if self._filter(r, response, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/masothue/data/raw/masothue/spiders/link_spider.py", line 90, in parse_location
+    yield CompanyLinkItem(tax_code=tax_id, href=full_url)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 76, in __init__
+    self[k] = v
+    ~~~~^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 85, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'CompanyLinkItem does not support field: tax_code'
+2025-08-08 13:58:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/tien-giang-177> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+2025-08-08 13:58:53 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): tmproxy.com:443
+2025-08-08 13:58:58 [urllib3.connectionpool] DEBUG: https://tmproxy.com:443 "POST /api/proxy/get-new-proxy HTTP/11" 200 None
+2025-08-08 13:58:58 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → dùng lại proxy cũ
+2025-08-08 13:58:58 [link_spider] WARNING: [TMProxy] Không lấy được proxy!
+2025-08-08 13:58:58 [scrapy.core.scraper] ERROR: Spider error processing <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/tien-giang-177> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+Traceback (most recent call last):
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/defer.py", line 279, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy_splash/middleware.py", line 162, in process_spider_output
+    for el in result:
+              ^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/offsite.py", line 28, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/referer.py", line 352, in <genexpr>
+    return (self._set_referer(r, response) for r in result or ())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/urllength.py", line 27, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/depth.py", line 31, in <genexpr>
+    return (r for r in result or () if self._filter(r, response, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/masothue/data/raw/masothue/spiders/link_spider.py", line 90, in parse_location
+    "tax_id": tax_id,
+      ^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 76, in __init__
+    self[k] = v
+    ~~~~^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 85, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'CompanyLinkItem does not support field: tax_code'
+2025-08-08 13:58:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/thua-thien-hue-66> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+2025-08-08 13:58:58 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): tmproxy.com:443
+2025-08-08 13:59:03 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2025-08-08 13:59:03 [urllib3.connectionpool] DEBUG: https://tmproxy.com:443 "POST /api/proxy/get-new-proxy HTTP/11" 200 None
+2025-08-08 13:59:03 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → dùng lại proxy cũ
+2025-08-08 13:59:03 [link_spider] WARNING: [TMProxy] Không lấy được proxy!
+2025-08-08 13:59:03 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2025-08-08 13:59:03 [scrapy.core.scraper] ERROR: Spider error processing <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/thua-thien-hue-66> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+Traceback (most recent call last):
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/defer.py", line 279, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy_splash/middleware.py", line 162, in process_spider_output
+    for el in result:
+              ^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/offsite.py", line 28, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/referer.py", line 352, in <genexpr>
+    return (self._set_referer(r, response) for r in result or ())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/urllength.py", line 27, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/depth.py", line 31, in <genexpr>
+    return (r for r in result or () if self._filter(r, response, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/masothue/data/raw/masothue/spiders/link_spider.py", line 90, in parse_location
+    "tax_id": tax_id,
+      ^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 76, in __init__
+    self[k] = v
+    ~~~~^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 85, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'CompanyLinkItem does not support field: tax_code'
+2025-08-08 13:59:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/thanh-hoa-4> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+2025-08-08 13:59:03 [scrapy.core.scraper] ERROR: Spider error processing <GET https://masothue.com/tra-cuu-ma-so-thue-theo-tinh/thanh-hoa-4> (referer: https://masothue.com/tra-cuu-ma-so-thue-theo-tinh)
+Traceback (most recent call last):
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/defer.py", line 279, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy_splash/middleware.py", line 162, in process_spider_output
+    for el in result:
+              ^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/offsite.py", line 28, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/referer.py", line 352, in <genexpr>
+    return (self._set_referer(r, response) for r in result or ())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/urllength.py", line 27, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/spidermiddlewares/depth.py", line 31, in <genexpr>
+    return (r for r in result or () if self._filter(r, response, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 106, in process_sync
+    for r in iterable:
+  File "/home/hoanganh12/masothue/data/raw/masothue/spiders/link_spider.py", line 90, in parse_location
+    "tax_id": tax_id,
+      ^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 76, in __init__
+    self[k] = v
+    ~~~~^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/item.py", line 85, in __setitem__
+    raise KeyError(f"{self.__class__.__name__} does not support field: {key}")
+KeyError: 'CompanyLinkItem does not support field: tax_code'
+2025-08-08 13:59:04 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
