@@ -1,0 +1,210 @@
+2025-08-27 11:00:06 [scrapy.utils.log] INFO: Scrapy 2.13.3 started (bot: masothue)
+2025-08-27 11:00:06 [scrapy.utils.log] INFO: Versions:
+{'lxml': '5.2.1',
+ 'libxml2': '2.10.4',
+ 'cssselect': '1.2.0',
+ 'parsel': '1.8.1',
+ 'w3lib': '2.0.0',
+ 'Twisted': '23.10.0',
+ 'Python': '3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, '
+           '13:27:36) [GCC 11.2.0]',
+ 'pyOpenSSL': '24.2.1 (OpenSSL 3.0.16 11 Feb 2025)',
+ 'cryptography': '43.0.0',
+ 'Platform': 'Linux-6.14.0-27-generic-x86_64-with-glibc2.39'}
+2025-08-27 11:00:06 [scrapy.addons] INFO: Enabled addons:
+[]
+2025-08-27 11:00:06 [scrapy.extensions.telnet] INFO: Telnet Password: ffa8c6c0050738db
+2025-08-27 11:00:06 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-08-27 11:00:06 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'AUTOTHROTTLE_MAX_DELAY': 10,
+ 'AUTOTHROTTLE_START_DELAY': 2,
+ 'BOT_NAME': 'masothue',
+ 'CONCURRENT_REQUESTS': 8,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 4,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 1.0,
+ 'DOWNLOAD_FAIL_ON_DATALOSS': False,
+ 'LOG_FILE': '/home/hoanganh12/masothue/data/raw/logs/default/json_parser_spider/2025-08-27T11_00_04.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'masothue.spiders',
+ 'RETRY_HTTP_CODES': [500, 502, 503, 504, 522, 524, 408, 403, 407],
+ 'RETRY_TIMES': 5,
+ 'SPIDER_MODULES': ['masothue.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'}
+2025-08-27 11:00:07 [py.warnings] WARNING: /home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/url.py:26: ScrapyDeprecationWarning: The scrapy.utils.url.canonicalize_url function is deprecated, use w3lib.url.canonicalize_url instead.
+  warnings.warn(
+
+2025-08-27 11:00:07 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'masothue.middleware.TMProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'masothue.middleware.TMProxyRetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy_splash.SplashCookiesMiddleware',
+ 'scrapy_splash.SplashMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-08-27 11:00:07 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy_splash.SplashDeduplicateArgsMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-08-27 11:00:07 [py.warnings] WARNING: /home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py:98: ScrapyDeprecationWarning: The following enabled spider middlewares, directly or through their parent classes, define the deprecated process_start_requests() method: scrapy_splash.middleware.SplashDeduplicateArgsMiddleware. process_start_requests() has been deprecated in favor of a new method, process_start(), to support asynchronous code execution. process_start_requests() will stop being called in a future version of Scrapy. If you use Scrapy 2.13 or higher only, replace process_start_requests() with process_start(); note that process_start() is a coroutine (async def). If you need to maintain compatibility with lower Scrapy versions, when defining process_start_requests() in a spider middleware class, define process_start() as well. See the release notes of Scrapy 2.13 for details: https://docs.scrapy.org/en/2.13/news.html
+  warn(
+
+2025-08-27 11:00:07 [scrapy.core.spidermw] WARNING: Middleware scrapy_splash.middleware.SplashDeduplicateArgsMiddleware doesn't support asynchronous spider output, this is deprecated and will stop working in a future version of Scrapy. The middleware should be updated to support it. Please see https://docs.scrapy.org/en/latest/topics/coroutines.html#for-middleware-users for more information.
+2025-08-27 11:00:07 [scrapy.middleware] INFO: Enabled item pipelines:
+['masothue.pipelines.PostgresPipeline']
+2025-08-27 11:00:07 [scrapy.core.engine] INFO: Spider opened
+2025-08-27 11:00:07 [py.warnings] WARNING: /home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py:433: ScrapyDeprecationWarning: masothue.spiders.parse_data.JsonParserSpider defines the deprecated start_requests() method. start_requests() has been deprecated in favor of a new method, start(), to support asynchronous code execution. start_requests() will stop being called in a future version of Scrapy. If you use Scrapy 2.13 or higher only, replace start_requests() with start(); note that start() is a coroutine (async def). If you need to maintain compatibility with lower Scrapy versions, when overriding start_requests() in a spider class, override start() as well; you can use super() to reuse the inherited start() implementation without copy-pasting. See the release notes of Scrapy 2.13 for details: https://docs.scrapy.org/en/2.13/news.html
+  warn(
+
+2025-08-27 11:00:07 [json_parser_spider] INFO: [*] Bắt đầu parse dữ liệu JSONB từ company_tax_info_table...
+2025-08-27 11:00:07 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2025-08-27 11:00:07 [scrapy.core.engine] ERROR: Scraper close failure
+Traceback (most recent call last):
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/crawler.py", line 157, in crawl
+    yield self.engine.open_spider(self.spider)
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/twisted/internet/defer.py", line 1248, in adapt
+    extracted: _SelfResultT | Failure = result.result()
+                                        ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/engine.py", line 443, in open_spider
+    self._start = await self.scraper.spidermw.process_start(spider)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 394, in process_start
+    sync_start = iter(spider.start_requests())
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/masothue/data/raw/masothue/spiders/parse_data.py", line 143, in start_requests
+    self.parse_record(tax_code, data)
+  File "/home/hoanganh12/masothue/data/raw/masothue/spiders/parse_data.py", line 159, in parse_record
+    self.handle_key_value(cur, tax_code, key, val)
+  File "/home/hoanganh12/masothue/data/raw/masothue/spiders/parse_data.py", line 170, in handle_key_value
+    cur.execute(f"""
+psycopg2.errors.UndefinedTable: relation "parsed_company_tax_info" does not exist
+CONTEXT:  SQL statement "ALTER TABLE parsed_company_tax_info ADD COLUMN "key" TEXT"
+PL/pgSQL function inline_code_block line 9 at EXECUTE
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/twisted/internet/defer.py", line 1075, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/engine.py", line 503, in <lambda>
+    dfd.addBoth(lambda _: self.scraper.close_spider())
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/scraper.py", line 130, in close_spider
+    raise RuntimeError("Scraper slot not assigned")
+RuntimeError: Scraper slot not assigned
+2025-08-27 11:00:07 [scrapy.core.engine] ERROR: Scheduler close failure
+Traceback (most recent call last):
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/crawler.py", line 157, in crawl
+    yield self.engine.open_spider(self.spider)
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/twisted/internet/defer.py", line 1248, in adapt
+    extracted: _SelfResultT | Failure = result.result()
+                                        ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/engine.py", line 443, in open_spider
+    self._start = await self.scraper.spidermw.process_start(spider)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 394, in process_start
+    sync_start = iter(spider.start_requests())
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/masothue/data/raw/masothue/spiders/parse_data.py", line 143, in start_requests
+    self.parse_record(tax_code, data)
+  File "/home/hoanganh12/masothue/data/raw/masothue/spiders/parse_data.py", line 159, in parse_record
+    self.handle_key_value(cur, tax_code, key, val)
+  File "/home/hoanganh12/masothue/data/raw/masothue/spiders/parse_data.py", line 170, in handle_key_value
+    cur.execute(f"""
+psycopg2.errors.UndefinedTable: relation "parsed_company_tax_info" does not exist
+CONTEXT:  SQL statement "ALTER TABLE parsed_company_tax_info ADD COLUMN "key" TEXT"
+PL/pgSQL function inline_code_block line 9 at EXECUTE
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/twisted/internet/defer.py", line 1075, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/engine.py", line 507, in <lambda>
+    dfd.addBoth(lambda _: cast(_Slot, self._slot).scheduler.close(reason))
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/scheduler.py", line 329, in close
+    if self.dqs is not None:
+AttributeError: 'Scheduler' object has no attribute 'dqs'
+2025-08-27 11:00:07 [json_parser_spider] INFO: [DONE] Spider dừng với lý do: shutdown
+2025-08-27 11:00:07 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method CoreStats.spider_closed of <scrapy.extensions.corestats.CoreStats object at 0x715777a0f020>>
+Traceback (most recent call last):
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/crawler.py", line 157, in crawl
+    yield self.engine.open_spider(self.spider)
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/twisted/internet/defer.py", line 1248, in adapt
+    extracted: _SelfResultT | Failure = result.result()
+                                        ^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/engine.py", line 443, in open_spider
+    self._start = await self.scraper.spidermw.process_start(spider)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 394, in process_start
+    sync_start = iter(spider.start_requests())
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoanganh12/masothue/data/raw/masothue/spiders/parse_data.py", line 143, in start_requests
+    self.parse_record(tax_code, data)
+  File "/home/hoanganh12/masothue/data/raw/masothue/spiders/parse_data.py", line 159, in parse_record
+    self.handle_key_value(cur, tax_code, key, val)
+  File "/home/hoanganh12/masothue/data/raw/masothue/spiders/parse_data.py", line 170, in handle_key_value
+    cur.execute(f"""
+psycopg2.errors.UndefinedTable: relation "parsed_company_tax_info" does not exist
+CONTEXT:  SQL statement "ALTER TABLE parsed_company_tax_info ADD COLUMN "key" TEXT"
+PL/pgSQL function inline_code_block line 9 at EXECUTE
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/defer.py", line 417, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/extensions/corestats.py", line 41, in spider_closed
+    assert self.start_time is not None
+AssertionError
+2025-08-27 11:00:07 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'items_per_minute': None,
+ 'log_count/ERROR': 3,
+ 'log_count/INFO': 10,
+ 'log_count/WARNING': 4,
+ 'responses_per_minute': None}
+2025-08-27 11:00:07 [scrapy.core.engine] INFO: Spider closed (shutdown)
+2025-08-27 11:00:07 [twisted] CRITICAL: Unhandled error in Deferred:
+2025-08-27 11:00:07 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/twisted/internet/defer.py", line 2000, in _inlineCallbacks
+    result = context.run(gen.send, result)
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/crawler.py", line 157, in crawl
+    yield self.engine.open_spider(self.spider)
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/twisted/internet/defer.py", line 1248, in adapt
+    extracted: _SelfResultT | Failure = result.result()
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/engine.py", line 443, in open_spider
+    self._start = await self.scraper.spidermw.process_start(spider)
+  File "/home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py", line 394, in process_start
+    sync_start = iter(spider.start_requests())
+  File "/home/hoanganh12/masothue/data/raw/masothue/spiders/parse_data.py", line 143, in start_requests
+    self.parse_record(tax_code, data)
+  File "/home/hoanganh12/masothue/data/raw/masothue/spiders/parse_data.py", line 159, in parse_record
+    self.handle_key_value(cur, tax_code, key, val)
+  File "/home/hoanganh12/masothue/data/raw/masothue/spiders/parse_data.py", line 170, in handle_key_value
+    cur.execute(f"""
+psycopg2.errors.UndefinedTable: relation "parsed_company_tax_info" does not exist
+CONTEXT:  SQL statement "ALTER TABLE parsed_company_tax_info ADD COLUMN "key" TEXT"
+PL/pgSQL function inline_code_block line 9 at EXECUTE
+

@@ -65,3 +65,6 @@ c.Terminal 3: Nhập lệnh "cd masothue/data/raw" sau đó nhấn enter.Tiếp 
       ->version chọn default: the lastest version
       ->spider chọn 1 trong 2: link_spider(nếu muốn crawl link công ty) và detail_worker_spider(nếu muốn crawl thông tin chi tiết)
 --> Sau đó chuyển sang phần Jobs để xem các spider nào đang chạy. Có thể bấm "stop" nếu muốn dừng spider và bấm "start" nếu muốn bắt đầu spider nào đó.Trong khi spider đang hoạt động có thể bấm "log" để xem log hoạt động của spider.
+
+5.Nhập mã số thuế và hiện thị thông tin chi tiết dạng json và sẽ ghi đè thông tin mới
+Bật terminal--> nhập "cd/masothue/data/raw" --> nhập tiếp "python -m master.master" --> sau đó sẽ hiển thị "Nhập mã số thuế:    " ---> Sau đó nhập mã số thuế khả dụng trong db và chương trình sẽ lấy thông tin chi tiết dạng jsonb

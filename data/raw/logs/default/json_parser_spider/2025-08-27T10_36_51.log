@@ -1,0 +1,245 @@
+2025-08-27 10:36:56 [scrapy.utils.log] INFO: Scrapy 2.13.3 started (bot: masothue)
+2025-08-27 10:36:56 [scrapy.utils.log] INFO: Versions:
+{'lxml': '5.2.1',
+ 'libxml2': '2.10.4',
+ 'cssselect': '1.2.0',
+ 'parsel': '1.8.1',
+ 'w3lib': '2.0.0',
+ 'Twisted': '23.10.0',
+ 'Python': '3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, '
+           '13:27:36) [GCC 11.2.0]',
+ 'pyOpenSSL': '24.2.1 (OpenSSL 3.0.16 11 Feb 2025)',
+ 'cryptography': '43.0.0',
+ 'Platform': 'Linux-6.14.0-27-generic-x86_64-with-glibc2.39'}
+2025-08-27 10:36:56 [scrapy.addons] INFO: Enabled addons:
+[]
+2025-08-27 10:36:56 [scrapy.extensions.telnet] INFO: Telnet Password: 840f5b58bf253240
+2025-08-27 10:36:56 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-08-27 10:36:56 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'AUTOTHROTTLE_MAX_DELAY': 10,
+ 'AUTOTHROTTLE_START_DELAY': 2,
+ 'BOT_NAME': 'masothue',
+ 'CONCURRENT_REQUESTS': 8,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 4,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 1.0,
+ 'DOWNLOAD_FAIL_ON_DATALOSS': False,
+ 'LOG_FILE': '/home/hoanganh12/masothue/data/raw/logs/default/json_parser_spider/2025-08-27T10_36_51.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'masothue.spiders',
+ 'RETRY_HTTP_CODES': [500, 502, 503, 504, 522, 524, 408, 403, 407],
+ 'RETRY_TIMES': 5,
+ 'SPIDER_MODULES': ['masothue.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'}
+2025-08-27 10:36:57 [py.warnings] WARNING: /home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/utils/url.py:26: ScrapyDeprecationWarning: The scrapy.utils.url.canonicalize_url function is deprecated, use w3lib.url.canonicalize_url instead.
+  warnings.warn(
+
+2025-08-27 10:36:57 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'masothue.middleware.TMProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'masothue.middleware.TMProxyRetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy_splash.SplashCookiesMiddleware',
+ 'scrapy_splash.SplashMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-08-27 10:36:57 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy_splash.SplashDeduplicateArgsMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-08-27 10:36:57 [py.warnings] WARNING: /home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py:98: ScrapyDeprecationWarning: The following enabled spider middlewares, directly or through their parent classes, define the deprecated process_start_requests() method: scrapy_splash.middleware.SplashDeduplicateArgsMiddleware. process_start_requests() has been deprecated in favor of a new method, process_start(), to support asynchronous code execution. process_start_requests() will stop being called in a future version of Scrapy. If you use Scrapy 2.13 or higher only, replace process_start_requests() with process_start(); note that process_start() is a coroutine (async def). If you need to maintain compatibility with lower Scrapy versions, when defining process_start_requests() in a spider middleware class, define process_start() as well. See the release notes of Scrapy 2.13 for details: https://docs.scrapy.org/en/2.13/news.html
+  warn(
+
+2025-08-27 10:36:57 [scrapy.core.spidermw] WARNING: Middleware scrapy_splash.middleware.SplashDeduplicateArgsMiddleware doesn't support asynchronous spider output, this is deprecated and will stop working in a future version of Scrapy. The middleware should be updated to support it. Please see https://docs.scrapy.org/en/latest/topics/coroutines.html#for-middleware-users for more information.
+2025-08-27 10:36:57 [scrapy.middleware] INFO: Enabled item pipelines:
+['masothue.pipelines.PostgresPipeline']
+2025-08-27 10:36:57 [scrapy.core.engine] INFO: Spider opened
+2025-08-27 10:36:57 [py.warnings] WARNING: /home/hoanganh12/anaconda3/lib/python3.12/site-packages/scrapy/core/spidermw.py:433: ScrapyDeprecationWarning: masothue.spiders.parse_data.JsonParserSpider defines the deprecated start_requests() method. start_requests() has been deprecated in favor of a new method, start(), to support asynchronous code execution. start_requests() will stop being called in a future version of Scrapy. If you use Scrapy 2.13 or higher only, replace start_requests() with start(); note that start() is a coroutine (async def). If you need to maintain compatibility with lower Scrapy versions, when overriding start_requests() in a spider class, override start() as well; you can use super() to reuse the inherited start() implementation without copy-pasting. See the release notes of Scrapy 2.13 for details: https://docs.scrapy.org/en/2.13/news.html
+  warn(
+
+2025-08-27 10:36:57 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-08-27 10:36:57 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2025-08-27 10:36:57 [json_parser_spider] INFO: [*] Bắt đầu parse dữ liệu JSONB từ company_tax_info_table...
+2025-08-27 10:37:12 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:37:27 [json_parser_spider] INFO: [TMProxy] Dùng current proxy sau khi get_new thất bại
+2025-08-27 10:37:30 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:37:30 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:37:30 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:37:31 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:37:31 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:37:32 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:37:32 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:37:33 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:37:33 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:37:33 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:37:33 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:37:34 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:37:34 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:37:34 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:37:34 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:37:35 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:37:35 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:37:35 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:37:35 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:37:36 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:37:36 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:37:37 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:37:37 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:37:38 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:37:38 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:37:43 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:37:48 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:37:49 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:37:49 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:37:59 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:37:59 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:38:00 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:38:00 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-08-27 10:38:00 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:38:01 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:38:01 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:38:02 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:38:02 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:38:02 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:38:02 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:38:03 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:38:03 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:38:03 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:38:03 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:38:04 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:38:04 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:38:04 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:38:04 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:38:05 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:38:05 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:38:10 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:38:16 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:38:17 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:38:17 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:38:17 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:38:22 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:38:23 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:38:23 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:38:33 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:38:34 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:38:35 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:38:35 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:38:35 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:38:35 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:38:36 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:38:36 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:38:36 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:38:36 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:38:37 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:38:37 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:38:42 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:38:52 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:38:53 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:38:53 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:38:54 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:38:54 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:38:55 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:38:55 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:38:55 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:38:55 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:38:56 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:38:56 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:38:56 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:38:56 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:38:57 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:38:57 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:38:57 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:38:57 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:38:58 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:38:58 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:38:59 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:38:59 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:39:00 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:39:00 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:39:00 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:39:00 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:39:01 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:39:01 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-08-27 10:39:01 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:39:02 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:39:02 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:39:03 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:39:03 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:39:03 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:39:04 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:39:05 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:39:05 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:39:05 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:39:06 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:39:07 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:39:07 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:39:07 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:39:12 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:39:13 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:39:13 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:39:18 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:39:19 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:39:20 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:39:20 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:39:20 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:39:20 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:39:21 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:39:21 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:39:21 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:39:21 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:39:22 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:39:22 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:39:22 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:39:22 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:39:23 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:39:23 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:39:24 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:39:34 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:39:35 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:39:35 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:39:40 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2025-08-27 10:39:40 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:39:49 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2025-08-27 10:39:49 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:39:50 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:39:50 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:39:50 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:39:50 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:39:51 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:39:51 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:39:56 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:40:03 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:40:04 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:40:04 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:40:04 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:40:04 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:40:05 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:40:05 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:40:06 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:40:06 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:40:07 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:40:07 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:40:08 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:40:08 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:40:09 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:40:09 [json_parser_spider] WARNING: [TMProxy] Exception: Unsupported URL scheme 'db': no handler available for that scheme → retry với proxy mới/current
+2025-08-27 10:40:09 [masothue.middleware] WARNING: [TMProxy] Chưa thể đổi proxy → retry sau
+2025-08-27 10:40:09 [json_parser_spider] INFO: [TMProxy] Retry với current proxy
+2025-08-27 10:40:10 [json_parser_spider] INFO: [TMProxy] Retry với proxy: http://171.231.122.150:42891
+2025-08-27 10:40:10 [scrapy.core.engine] INFO: Closing spider (shutdown)
