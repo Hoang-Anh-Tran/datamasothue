@@ -1,7 +1,7 @@
 Crawler lấy link công ty và chi tiết công ty từ masothue.com bằng Scrapy + Redis + PostgreSQL
 
 1.Thư viện cần cài:
-      ---Thư viện scrapyd và web điều chỉnh các spider---
+Thư viện scrapyd và web điều chỉnh các spider
 --->Bật terminal và nhập lệnh:
 pip install scrapy
 pip install scrapy-redis
@@ -10,7 +10,7 @@ pip install scrapyd-client
 pip install scrapydweb
 pip install logparser
 
-                                  ---Thư viện redis---
+Thư viện redis
 --->Bật terminal và nhập lệnh:
 pip install redis
 sudo apt update
@@ -19,11 +19,11 @@ sudo systemctl enable redis-server
 sudo systemctl start redis-server
 
 
-                          ---Deploy spider lên scrapyd---
+Deploy spider lên scrapyd
 --->Bật terminal và nhập lệnh:
 scrapyd-deploy default -p masothue
 
-                                  ---Các thư viện khác---
+Các thư viện khác
 --->Bật terminal và nhập lệnh:
 pip install python-dotenv
 pip install lxml
@@ -37,7 +37,7 @@ REDIS_PORT=6379
 REDIS_DB=0
 
 3.Database
-                     ---Bảng database---
+Bảng database
 Khởi tạo 2 tables:
 
 Table 1:
